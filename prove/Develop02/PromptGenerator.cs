@@ -4,7 +4,7 @@ public class PromptGenerator
     {
         "What was your favorite thing you did today?", 
         "Is there anything you would change about the day?", 
-        "Write about the people you a grateful for.", 
+        "Write about the people you are grateful for.", 
         "What are some things that bring you joy?", 
         "What is something that makes you proud of yourself?", 
         "Who is your hero? Why?"
