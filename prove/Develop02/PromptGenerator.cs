@@ -1,20 +1,22 @@
 public class PromptGenerator
 {
-    public List<string> _prompts = new List<string>();
+    public List<string> _prompts = new List<string>()
+    {
+        "What was your favorite thing you did today?", 
+        "Is there anything you would change about the day?", 
+        "Write about the people you a grateful for.", 
+        "What are some things that bring you joy?", 
+        "What is something that makes you proud of yourself?", 
+        "Who is your hero? Why?"
+    };
 
     public string GetRandomPrompt()
     {
-        string [] _prompts = 
-        [
-            "What was your favorite thing you did today?", 
-            "Is there anything you would change about the day?", 
-            "Write about the people you a grateful for.", 
-            "What are some things that bring you joy?", 
-            "What is something that makes you proud of yourself?", 
-            "Who is your hero? Why?"
-        ];
+        Random randomNumber = new Random();
+        int randomIndex = randomNumber.Next(_prompts.Count);
+
+        string prompt = _prompts[randomIndex];
         
-        string prompt = Random.Shared.GetItems(_prompts, 1)[0];
         return prompt;
     }
 }
